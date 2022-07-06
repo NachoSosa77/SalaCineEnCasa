@@ -2,3 +2,8 @@
     width: 100%;
     margin: 1em auto;
 }
+
+.btn{
+    --bs-btn-hover-color: rgb(153, 84, 146);
+    --bs-btn-hover-border-color:rgb(153, 84, 146);
+}

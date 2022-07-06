@@ -23,8 +23,8 @@ const Movie = ({
           className="card-img-top"
           alt={poster_path}
         />
-        <div className="card-body">
-          <h5 className="card-title">{title}</h5>
+        <div className="card-body d-flex justify-content-between">
+          <h6 className="card-title">{title}</h6>
           <button type="button" className="btn btn-dark" onClick={handleShow}>
             Ver Más...
           </button>

@@ -9,6 +9,7 @@ const MovieListContainer = () => {
   const API_DISCOVER = "https://api.themoviedb.org/3/discover/movie?api_key=b892718013a1ebc19e52cd3a1b4b68c7&sort_by=popularity.desc";
 
   const [movies, setMovies] = useState([]);
+  const [rating, setrRating] = useState([]);
   const [query, setQuery] = useState('');
   let star = 5;
 
@@ -17,7 +18,8 @@ const MovieListContainer = () => {
       .then((res) => res.json())
       .then(data => {
         console.log(data);
-        setMovies(data.results);       
+        setMovies(data.results);  
+        setrRating(data.results);     
       })
       
   }, [])
@@ -31,6 +33,7 @@ const MovieListContainer = () => {
       const data = await res.json();
       console.log(data);
       setMovies(data.results);
+      setrRating(data.results);
     }
     catch (e) {
       console.log(e);
@@ -54,7 +57,7 @@ const MovieListContainer = () => {
       }
     }
     star = star*2;
-    setMovies(movies.filter((movie) =>  movie.vote_average <= star))
+    setrRating(movies.filter((movie) =>  movie.vote_average <= star))
     console.log(star);
     console.log(movies);
   }
@@ -62,7 +65,7 @@ const MovieListContainer = () => {
   
   return (
 
-    <div>
+    <div className="container">
       <form className="d-flex justify-content-center m-3" autoComplete="off" onSubmit={searchMovie}>
         <input className="form-control me-2"
           type="search"
@@ -71,17 +74,17 @@ const MovieListContainer = () => {
           name="query"
           value={query} onChange={changeHandler}
         />
-        <button className="btn btn-outline-success" type="submit">Buscar</button>
+        <button className="btn" type="submit">Buscar</button>
       </form>
 
       <div>
       <RatingStars handleClick={handleClick} />
       </div>
 
-      {movies.length > 0 ?(
+      {rating.length > 0 ?(
         <div className="container d-flex justify-content-center">
           <div className="row">
-            {movies.map((movie) =>
+            {rating.map((movie) =>
               <Movie key={movie.id} {...movie} />)}
           </div>
         </div>
