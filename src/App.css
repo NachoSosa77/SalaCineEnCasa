@@ -1,9 +1,9 @@
-.App {
-  margin:0;
-  padding:0;
-  text-decoration: none;
-  list-style-type: none;
-  outline:none;
-  background-color: #282c34;
-  color: #198754;
+/* Rating Star*/
+
+.star {
+    cursor: pointer;
+}
+
+.orange {
+    color: orange;
 }
