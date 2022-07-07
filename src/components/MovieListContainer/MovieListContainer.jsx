@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, {useState, useEffect} from 'react'
 import Movie from '../Movie/Movie';
 import RatingStars from '../RatingStars/RatingStars';
 import "./MovieListContainer.css";
@@ -74,15 +73,21 @@ const MovieListContainer = () => {
           name="query"
           value={query} onChange={changeHandler}
         />
-        <button className="btn" type="submit">Buscar</button>
+        <button className="btn-serach" type="submit">Buscar</button>
       </form>
 
       <div>
       <RatingStars handleClick={handleClick} />
       </div>
 
+      <div className="container d-flex justify-content-center mb-3">
+           <h2><i className="bi bi-film"></i></h2>
+           <h2 className="mx-2">Popular Movies</h2>
+      </div>
+
       {rating.length > 0 ?(
         <div className="container d-flex justify-content-center">
+          
           <div className="row">
             {rating.map((movie) =>
               <Movie key={movie.id} {...movie} />)}

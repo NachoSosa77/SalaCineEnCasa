@@ -1,0 +1,23 @@
+.btn {
+    font-weight: bold;
+    border: 1px solid rgb(201, 138, 194);
+    color: rgb(153, 84, 146);
+    background-color: rgb(240, 229, 239);
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 3px;
+}
+
+.btn:hover{
+    font-weight: bold;
+    border: 1px solid rgb(240, 229, 239);
+    color: rgb(153, 84, 146);
+    background-color: rgb(201, 138, 194);
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 3px;
+}
+
+.link{
+    text-decoration-line: none;
+}

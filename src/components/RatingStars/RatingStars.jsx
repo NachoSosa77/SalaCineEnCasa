@@ -1,4 +1,5 @@
   import React from 'react';
+  import "./Rating.css";
 
 
   const RatingStars = (props) => {
@@ -7,7 +8,7 @@
       <div className="container">
         <div className="justify-content-center m-3">
                 <h3>Filtrar por clasificación:</h3> 
-                  <div>
+                  <div className="stars">
                       <span onClick={handleClick}  id="1" className="fa fa-star star"></span>
                       <span onClick={handleClick}  id="2" className="fa fa-star star ms-2"></span>
                       <span onClick={handleClick}  id="3" className="fa fa-star star ms-2"></span>

@@ -3,7 +3,15 @@
     margin: 1em auto;
 }
 
-.btn{
-    --bs-btn-hover-color: rgb(153, 84, 146);
-    --bs-btn-hover-border-color:rgb(153, 84, 146);
+.btn-serach{
+    font-weight: bold;
+    border: 1px solid rgb(201, 138, 194);
+    color: rgb(153, 84, 146);
+    background-color: rgb(240, 229, 239);
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 3px;
+}
+.form-control {
+    border-color: rgb(153, 84, 146);
 }

@@ -1,13 +1,19 @@
-.navbar-brand {
-    color:#198754;
-    font-size: 28px;
-}
-
 .logo{
     width:15%;
     border-radius:50%;
 }
 
 .navbar{
-   background-color: rgb(153, 84, 146)
+   background-color: rgb(153, 84, 146);
+   border-radius: 30px;
 }
+
+.nav-item{
+    font-weight: bold;
+    border: 1px solid rgb(201, 138, 194);
+    background-color: rgb(240, 229, 239);
+    border-radius: 20px;
+    padding: 5px;
+    margin-left: 5px;
+}
+
